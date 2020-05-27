@@ -11,6 +11,7 @@ import ec.edu.ups.controlador.*;
 import ec.edu.ups.dao.*;
 import ec.edu.ups.vista.*;
 import ec.edu.ups.idao.*;
+import ec.edu.ups.ventanas.VentanaTelefono;
 
 /**
  *
@@ -34,7 +35,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Main main = new Main();
+        //Main main = new Main();
+	VentanaTelefono ventana = new VentanaTelefono();
     }
     
     public Main(){
@@ -70,11 +72,11 @@ public class Main {
                     //Listar usuarios
                     controladorUsuario.verUsuarios();
                     break;
-                /*case 7:
+                case 7:
                     //registro de teléfono
-                    controladorTelefono.registrar();
+                    VentanaTelefono agenda = new VentanaTelefono();
                     break;
-                case 8:
+                /*case 8:
                     //modificar teléfono
                     controladorTelefono.actualizar();
                     break;

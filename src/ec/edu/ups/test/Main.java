@@ -35,8 +35,8 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Main main = new Main();
-	VentanaTelefono ventana = new VentanaTelefono();
+        Main main = new Main();
+	//VentanaTelefono ventana = new VentanaTelefono();
     }
     
     public Main(){
@@ -92,24 +92,24 @@ public class Main {
                     //listar teléfonos de la sesión
                     controladorUsuario.telefonosSesion();
                     break;*/
-                case 12:
+                case 8:
                     //listar teléfonos mediante la cédula
                     controladorUsuario.telefonosPorCedula();
                     break;
-                case 13:
+                case 9:
                     //listar todos los teléfonos
                     controladorTelefono.verTelefonos();
                     break;
-                case 14:
+                case 10:
                     //cambiar de usuario
                     controladorUsuario.iniciarSesion();
                     break;
-                case 15:
+                case 11:
                     //cerrar sesión
                     controladorUsuario.cerrarSesion();
                     break;
             }
-        }while(opc != 16);
+        }while(opc != 12);
     }
     
     public int menuSesionIniciada(){
@@ -121,16 +121,16 @@ public class Main {
             System.out.println("3) Eliminar Usuario");
             System.out.println("4) Buscar Usuario");
             System.out.println("5) Listar Todos los Usuarios registrados");
-            System.out.println("6) Registrar Teléfono");
-            System.out.println("7) Modificar Teléfono");
+            System.out.println("6) Agenda Telefónica");
+            /*System.out.println("7) Modificar Teléfono");
             System.out.println("8) Eliminar Teléfono");
             System.out.println("9) Buscar Teléfono");
-            System.out.println("10) Listar Teléfonos del Usuario");
-            System.out.println("11) Listar Teléfonos de un Usuario mediante la cédula");
-            System.out.println("12) Listar Todos los Teléfonos registrados");
-            System.out.println("13) Cambiar de Usuario");
-            System.out.println("14) Cerrar Sesión");
-            System.out.println("15) Cerrar programa");
+            System.out.println("10) Listar Teléfonos del Usuario");*/
+            System.out.println("7) Listar Teléfonos de un Usuario mediante la cédula");
+            System.out.println("8) Listar Todos los Teléfonos registrados");
+            System.out.println("9) Cambiar de Usuario");
+            System.out.println("10) Cerrar Sesión");
+            System.out.println("11) Cerrar programa");
             System.out.print("Ingrese una opcion: ");
             opc = leer.nextInt();
             leer.nextLine();

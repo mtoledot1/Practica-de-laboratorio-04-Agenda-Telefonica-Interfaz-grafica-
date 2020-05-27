@@ -12,13 +12,10 @@ public class VentanaTelefono {
 	Frame ventana = new Frame("Agenda Telefónica");
 	ventana.setBounds(1600, 200, 400, 400);
 	
-	//Creacion panel principal
-	Panel pnlPrincipal = new Panel(new BorderLayout());
-	
-	//Panel de registro de un telefono
+	//Panel principal
 	GridBagLayout grid = new GridBagLayout();
 	GridBagConstraints c = new GridBagConstraints();
-	Panel pnlRegistrar = new Panel(grid);
+	Panel pnlPrincipal = new Panel(grid);
 	
 	Label lblCodigo = new Label("Código:");
 	Label lblNumero = new Label("Número:");
@@ -36,26 +33,30 @@ public class VentanaTelefono {
 	Button btnEliminar = new Button("Eliminar");
 	Button btnBuscar = new Button("Buscar");
 	Button btnListar = new Button("Listar");
+	
 	Button btnSalir = new Button("Salir");
+	btnSalir.addActionListener(al -> {
+	    ventana.dispose();
+	});
 	
 	c.fill = GridBagConstraints.NONE;
 	c.gridx = 0;
 	c.weighty = 1;
-	pnlRegistrar.add(lblCodigo,c);
-	pnlRegistrar.add(lblNumero,c);
-	pnlRegistrar.add(lblTipo,c);
-	pnlRegistrar.add(lblOperadora,c);
+	pnlPrincipal.add(lblCodigo,c);
+	pnlPrincipal.add(lblNumero,c);
+	pnlPrincipal.add(lblTipo,c);
+	pnlPrincipal.add(lblOperadora,c);
 	
 	c.ipadx = 200;
 	c.ipady = 5;
 	c.gridx = 1;
 	c.gridy = 0;
 	c.gridwidth = GridBagConstraints.RELATIVE;
-	pnlRegistrar.add(txtCodigo,c);
+	pnlPrincipal.add(txtCodigo,c);
 	c.gridy = GridBagConstraints.RELATIVE;
-	pnlRegistrar.add(txtNumero,c);
-	pnlRegistrar.add(txtTipo,c);
-	pnlRegistrar.add(txtOperadora,c);
+	pnlPrincipal.add(txtNumero,c);
+	pnlPrincipal.add(txtTipo,c);
+	pnlPrincipal.add(txtOperadora,c);
 	
 	c.gridy = GridBagConstraints.LAST_LINE_END;
 	c.gridwidth = 1;
@@ -63,30 +64,28 @@ public class VentanaTelefono {
 	c.gridx = 0;
 	c.ipadx = 10;
 	c.weightx = 0;
-	pnlRegistrar.add(btnRegistrar,c);
+	pnlPrincipal.add(btnRegistrar,c);
 	c.gridx+=2;
-	pnlRegistrar.add(btnModificar,c);
+	pnlPrincipal.add(btnModificar,c);
 	c.gridx+=2;
-	pnlRegistrar.add(btnEliminar,c);
+	pnlPrincipal.add(btnEliminar,c);
 	c.gridwidth = 3;
 	c.gridx = 0;
 	c.gridy++;
-	pnlRegistrar.add(btnBuscar,c);
+	pnlPrincipal.add(btnBuscar,c);
 	c.gridx+=2;
-	pnlRegistrar.add(btnListar,c);
+	pnlPrincipal.add(btnListar,c);
 	
 	c.gridx = 0;
 	c.gridwidth = 10;
 	c.gridy++;
-	pnlRegistrar.add(lblEstado,c);
+	pnlPrincipal.add(lblEstado,c);
 	c.gridx = 0;
 	c.gridwidth = 10;
 	c.gridy++;
-	pnlRegistrar.add(btnSalir,c);
+	pnlPrincipal.add(btnSalir,c);
 	
 	//Fin Panel de Registro
-	
-	pnlPrincipal.add(pnlRegistrar, BorderLayout.CENTER);
 	
 	ventana.add(pnlPrincipal);
 	ventana.setVisible(true);

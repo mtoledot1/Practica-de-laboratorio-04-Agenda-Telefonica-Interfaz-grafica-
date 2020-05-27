@@ -70,7 +70,7 @@ public class Main {
                     //Listar usuarios
                     controladorUsuario.verUsuarios();
                     break;
-                case 7:
+                /*case 7:
                     //registro de teléfono
                     controladorTelefono.registrar();
                     break;
@@ -89,7 +89,7 @@ public class Main {
                 case 11:
                     //listar teléfonos de la sesión
                     controladorUsuario.telefonosSesion();
-                    break;
+                    break;*/
                 case 12:
                     //listar teléfonos mediante la cédula
                     controladorUsuario.telefonosPorCedula();
